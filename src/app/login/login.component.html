@@ -1,0 +1,94 @@
+<section class="h-100 blue-form" style="background-color: #eee;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xl-10">
+          <div class="card rounded-3 text-black">
+            <div class="row g-0">
+              
+              <div class="col-lg-6  d-flex align-items-center blue-custom-2">
+                <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                  <h4 class="mb-3">We are more than just a company</h4>
+                   <ul class="team">
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. </li>
+                    <li>Unde cumque atque beatae rem, sit, repudiandae repellendus ipsam consectetur doloribus, laboriosam aspernatur at error. </li>
+                    <li>Ipsum assumenda beatae facere aliquid placeat tenetur!</li> 
+                   </ul>
+                </div>
+              </div>
+              <div class="col-lg-6 " >
+                <!-- login form starts -->
+                <div class="card-body p-md-4 mx-md-3" >
+  
+                  <div class="text-center">
+                    <img src="assets/images/apple-logo.png"
+                      style="height: 85px;" alt="logo">
+                    <h4 class="mt-1 mb-2 pb-1">Sign In</h4>
+                  </div>
+
+                  <form [formGroup]= "reactive_Form"  (ngSubmit)= "onSubmit()">
+                    <div class="form-outline mb-3">
+                      <div class="form-group mt-3">
+                        <label>Email</label>
+                        <input  type="text" formControlName="email"   class="form-control" [ngClass]= "{ 'is-invalid': submitted && f['email'].errors }"/>
+                        <div *ngIf= "submitted && f['email'].errors" class="invalid-feedback">
+                          <div *ngIf= "f['email'].errors['required']">Email is required</div>
+                          <div *ngIf= "f['email'].errors['pattern']">Email is invalid</div>
+                        </div>
+                      </div>
+                    
+  
+                      <div class="form-group mt-3">
+                        <label>Password</label>
+                        <input type="password" formControlName="password" [minlength]="8" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }"
+                        />
+                        <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                          <div *ngIf= "f['password'].errors['required']">Password is required</div>
+                          <div *ngIf= "f['password'].errors['minlength']">
+                            Password must be at least 8 characters
+                          </div>
+                        </div>
+                      </div>
+  
+                      <button type="submit" class="btn btn-primary btn-block fa-lg blue-custom-2  w-100 border-0 mt-4">Log In</button>
+                      <small class="text-danger mb-3">{{errorMsg}}</small>
+                      <small class="text-danger mb-3">{{successMsg}}</small>
+                   
+                    <div class="d-flex align-items-center justify-content-center pb-4">
+                      <p class="mb-0 me-2">Don't have an account?</p>
+                      <a type="button" class=" font-weight-bold" (click)= "createUser()">Create new</a>
+                    </div>
+                    <div class="text-center">
+                      <p>or sign up with:</p>
+                      <button type="button" class="btn btn-link btn-floating mx-1">
+                        <img src="assets/images/facebook-f.svg"
+                      style="height: 18px;" alt="logo">
+                      </button>
+    
+                      <button type="button" class="btn btn-link btn-floating mx-1">
+                        <img src="assets/images/google.svg"
+                      style="height: 18px;" alt="logo">
+                      </button>
+    
+                      <button type="button" class="btn btn-link btn-floating mx-1">
+                        <img src="assets/images/twitter.svg"
+                      style="height: 18px;" alt="logo">
+                      </button>
+    
+                      <button type="button" class="btn btn-link btn-floating mx-1">
+                        <img src="assets/images/github.svg"
+                        style="height: 18px;" alt="logo">
+                      </button>
+                    </div>
+                </div> 
+                
+              </form>
+            
+                <!-- login form ends -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>

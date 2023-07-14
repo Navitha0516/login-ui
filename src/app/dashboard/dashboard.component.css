@@ -1,0 +1,30 @@
+.container-fluid{
+    background-color: #f6f7fa;
+    height: 100%;
+}
+#chart {
+    max-width: 800px;
+    margin: 35px auto;
+  }
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    border: 1px solid #e3e3f7;
+    background-clip: border-box;
+    box-shadow: none;
+    border-radius: 3px;
+}
+.card-body {
+    flex: 1 1 auto;
+    margin: 0;
+    padding: 1.5rem;
+    position: relative;
+}
+.card-over-data {
+    position: absolute;
+    width: 100%;
+}

@@ -1,0 +1,41 @@
+/* input styles */
+.form-control:focus {
+    box-shadow: none;
+    border-color: #000559;
+}
+ .form-control{
+    height: 38px;
+ }
+.team li {
+    background: url(src/assets/images/point.png) no-repeat left 4px;
+    display: block;
+    padding-left: 25px;
+    padding-bottom: 6px;
+}
+
+
+
+
+
+.blue-custom-2 {
+    /* fallback for old browsers */
+    background: #fccb90;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background-color: #000559;
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #000559;
+    }
+    
+    @media (min-width: 768px) {
+    .blue-form {
+    height: 100vh !important;
+    }
+    }
+    @media (min-width: 769px) {
+    .blue-custom-2 {
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+    }
+    }
